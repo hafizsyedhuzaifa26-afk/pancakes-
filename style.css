@@ -1,0 +1,62 @@
+/* --- Custom Variables & Theme --- */
+:root {
+    --primary-color: #d4a373;
+    --secondary-color: #fefae0;
+    --dark-brown: #331a00;
+    --syrup-amber: #b05700;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfbf7;
+    color: #2b2b2b;
+    overflow-x: hidden;
+  }
+  
+  /* --- Keyframe Animations --- */
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(212, 163, 115, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(212, 163, 115, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 163, 115, 0); }
+  }
+  
+  /* --- Applied Animation Classes --- */
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .btn-syrup {
+    background-color: var(--syrup-amber);
+    color: white;
+    transition: all 0.3s ease;
+    animation: pulseGlow 2.5s infinite;
+  }
+  
+  .btn-syrup:hover {
+    background-color: #8c4500;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(51, 26, 0, 0.15);
